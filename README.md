@@ -3,14 +3,14 @@ Code for "Unsupervised Zero-Shot RL via Functional Reward Representations"
 
 (Link to Paper)[PLACEHOLDER]
 
-#### Abstract
+### Abstract
 Can we pre-train a generalist agent from a large amount of unlabeled offline trajectories such that it can be immediately adapted to any new downstream tasks in a zero-shot manner?
 In this work, we present a \emph{functional} reward encoding (FRE) as a general, scalable solution to this *zero-shot RL* problem.
 Our main idea is to learn functional representations of any arbitrary tasks by encoding their state-reward samples using a transformer-based variational auto-encoder.
 This functional encoding not only enables the pre-training of an agent from a wide diversity of general unsupervised reward functions, but also provides a way to solve any new downstream tasks in a zero-shot manner, given a small number of reward-annotated samples.
 We empirically show that FRE agents trained on diverse random unsupervised reward functions can generalize to solve novel tasks in a range of simulated robotic benchmarks, often outperforming previous zero-shot RL and offline RL methods.
 
-#### Code Instructions
+### Code Instructions
 First install the dependencies in the `deps` folder.
 ```
 cd deps
