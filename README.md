@@ -1,4 +1,4 @@
-# fre
+# Unsupervised Zero-Shot RL via Functional Reward Representations
 Code for "Unsupervised Zero-Shot RL via Functional Reward Representations"
 
 (Link to Paper)[PLACEHOLDER]
