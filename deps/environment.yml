@@ -1,0 +1,23 @@
+name: project-brc
+channels:
+    - defaults
+dependencies:
+    - python=3.9
+    - pip
+    - numpy
+    - scipy
+    - h5py
+    - matplotlib
+    - scikit-learn
+    - jupyter
+    - tqdm
+    - seaborn
+    - mesalib
+    - glew
+    - glfw
+    - Cython
+    - conda-forge::opencv
+    - conda-forge::jax=0.4.14
+    - conda-forge::jaxlib=0.4.14=*cuda*
+    - pip:
+        - -r requirements.txt
