@@ -1,7 +1,9 @@
 # Unsupervised Zero-Shot RL via Functional Reward Representations
 Code for "Unsupervised Zero-Shot RL via Functional Reward Representations"
 
-(Link to Paper)[PLACEHOLDER]
+Kevin Frans, Seohong Park, Pieter Abbeel, Sergey Levine
+
+[Link to Paper](https://arxiv.org/abs/2402.17135)
 
 ### Abstract
 Can we pre-train a generalist agent from a large amount of unlabeled offline trajectories such that it can be immediately adapted to any new downstream tasks in a zero-shot manner?
