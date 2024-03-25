@@ -36,12 +36,12 @@ class GoalReachingRewardFunction(RewardFunction):
 
         params = selected_goal # (batch_size, obs_dim)
         encode_pairs = np.concatenate([traj_states, random_states], axis=1)
-        encode_rewards = self.compute_reward(encode_pairs, params[:, None, :], delta=True)[:, :, None]
+        encode_rewards = self.compute_reward(encode_pairs, params[:, None, :])[:, :, None]
         encode_pairs = np.concatenate([encode_pairs, encode_rewards], axis=-1)
 
         decode_pairs = random_states_decode
         decode_pairs[:, 0] = params # Decode the goal state too.
-        decode_rewards = self.compute_reward(decode_pairs, params[:, None, :], delta=True)[:, :, None]
+        decode_rewards = self.compute_reward(decode_pairs, params[:, None, :])[:, :, None]
         decode_pairs = np.concatenate([random_states_decode, decode_rewards], axis=-1)
 
         rewards = encode_pairs[:, 0, -1] # (batch_size,)
@@ -96,7 +96,7 @@ class GoalReachingRewardFunction(RewardFunction):
             random_states[:, 0, :2] = params[:, :2] # Make sure to include the goal.
         else:
             random_states[:, 0] = params
-        reward_pair_rews = self.compute_reward(random_states, params[:, None, :], delta=True)[..., None]
+        reward_pair_rews = self.compute_reward(random_states, params[:, None, :])[..., None]
         reward_pairs = np.concatenate([random_states, reward_pair_rews], axis=-1)
         return reward_pairs # (batch_size, reward_pairs, obs_dim + 1)
     
